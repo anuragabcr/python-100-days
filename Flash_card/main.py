@@ -1,7 +1,6 @@
 from tkinter import *
 import pandas as pd
 import random
-import time
 
 BACKGROUND_COLOR = "#B1DDC6"
 current_word = {}
