@@ -27,7 +27,7 @@ sheety_endpoint = "https://api.sheety.co/86bdf17eb71bd6613caa8796b6c0ee36/workou
 header = {
     "Content-Type": "application/json"
 }
-
+sheety_config = {}
 for exercise in exercise_data:
     sheety_config = {
         "workout": {
@@ -38,7 +38,6 @@ for exercise in exercise_data:
             "Calories": exercise['nf_calories'],
         }
     }
-    print(sheety_config)
-    sheety_response = requests.post(url=sheety_endpoint, json=sheety_config, headers=header)
-    print(sheety_response.text)
-
+print(sheety_config)
+sheety_response = requests.post(url=sheety_endpoint, json=sheety_config, headers=header)
+print(sheety_response.json())
